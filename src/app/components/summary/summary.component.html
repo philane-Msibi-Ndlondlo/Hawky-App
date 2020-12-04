@@ -1,0 +1,39 @@
+<section>
+  <nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a routerLink="/dashboard" class="brand-logo" style="text-align: left;">Hawky</a>
+        <ul class="right">
+          <li><a routerLink="/dashboard" title="Home"><i class="material-icons">home</i></a></li>
+          <li><a (click)="logout()" routerLink="#" [title]="'Log out (' + username + ')'"><i class="material-icons">power_settings_new</i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+
+  <div class="content">
+    <div class="center">
+      <div class="content-body" style="width: 80%; margin: 0 auto; margin-top: 4em;">
+        <h3>Summary Timetable</h3>
+        <table class="striped highlight centered responsive-table">
+          <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let timeRow of timetable">
+              <td>{{ timeRow.dayDate }}</td>
+              <td>{{ timeRow.timeIn }}</td>
+              <td>{{ timeRow.timeOut }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <a (click)="downloadPdf()" class="btn-floating btn-large pulse waves-effect waves-light red"><i class="material-icons">description</i></a>
+</section>

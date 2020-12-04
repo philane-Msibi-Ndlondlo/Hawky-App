@@ -1,0 +1,41 @@
+<section>
+  <nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a routerLink="/dashboard" class="brand-logo" style="text-align: left;">Hawky</a>
+        <ul class="right">
+          <li><a routerLink="/summary" title="Summary"><i class="material-icons">view_module</i></a></li>
+          <li><a (click)="logout()" routerLink="#" [title]="'Log out (' + username + ')'"><i class="material-icons">power_settings_new</i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+
+  <div class="content">
+    <div class="center">
+      <div class="content-body" style="width: 80%; margin: 0 auto; margin-top: 4em;">
+        <h3>Punch In and Out</h3>
+        <table class="striped highlight centered responsive-table">
+          <thead>
+            <tr>
+                <th>Today's Date</th>
+                <th>Current Time</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>{{currectDate}}</td>
+              <td>{{currectTime}}</td>
+              <td><button (click)="timeIn()" [disabled]="isTimeIn" class="waves-effect waves-light btn-small">{{ isTimeIn ? "Punched In" : "Punch In" }}</button></td>
+              <td><button (click)="timeOut()" [disabled]="isTimeOut" class="waves-effect waves-light btn-small red lighten-1">{{ isTimeOut ? "Punched Out" : "Punch Out" }}</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</section>

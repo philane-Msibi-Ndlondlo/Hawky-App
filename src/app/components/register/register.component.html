@@ -1,0 +1,69 @@
+<section class="home">
+  <nav>
+    <div class="nav-wrapper">
+      <a routerLink="/" class="brand-logo" style="text-align: left;">Hawky</a>
+    </div>
+  </nav>
+
+  <div class="row form">
+    <form [formGroup] = "regForm" class="col s12" (ngSubmit)="registerUser(regForm)">
+      <h4>Create An Account</h4>
+      <p>Attendance Register</p>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="firstName" formControlName="firstName" type="text">
+          <label for="firstName">First Name</label>
+          <span *ngIf="regForm.touched && regForm.controls.firstName.errors?.required" class="data-error">First name is Required!</span>
+          <span *ngIf="regForm.touched && regForm.controls.firstName.errors?.minlength" class="data-error">First name must contain et least 3 to 50 characters.</span>
+          <span *ngIf="regForm.touched && regForm.controls.firstName.errors?.maxlength" class="data-error">First name must contain et least 3 to 50 characters.</span>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="lastName" formControlName="lastName" type="text">
+          <label for="lastName">Last Name</label>
+          <span *ngIf="regForm.touched && regForm.controls.lastName.errors?.required" class="data-error">Last name is Required!</span>
+          <span *ngIf="regForm.touched && regForm.controls.lastName.errors?.minlength" class="data-error">Last name must contain et least 3 to 50 characters.</span>
+          <span *ngIf="regForm.touched && regForm.controls.lastName.errors?.maxlength" class="data-error">Last name must contain et least 3 to 50 characters.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="email" formControlName="email" type="email">
+          <label for="email">Email</label>
+          <span *ngIf="regForm.touched && regForm.controls.email.errors?.required" class="data-error">Email is Required!</span>
+          <span *ngIf="regForm.touched && regForm.controls.email.errors?.email" class="data-error">Email is not valid!.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">lock</i>
+          <input id="password" formControlName="password" type="password">
+          <label for="password">Password</label>
+          <span *ngIf="regForm.touched && regForm.controls.password.errors?.required" class="data-error">Password is Required!</span>
+          <span *ngIf="regForm.touched && regForm.controls.password.errors?.minlength" class="data-error">Password must contain at least 8 to 10 characters.</span>
+          <span *ngIf="regForm.touched && regForm.controls.password.errors?.maxlength" class="data-error">Password must contain at least 8 to 10 characters.</span>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">lock</i>
+          <input id="ConfirmPassword" type="password" formControlName="ConfirmPassword">
+          <label for="ConfirmPassword">Password</label>
+          <span *ngIf="regForm.touched && regForm.controls.ConfirmPassword.errors?.required" class="data-error">Confirm Password is Required!</span>
+          <span *ngIf="regForm.touched && regForm.controls.ConfirmPassword.errors?.minlength" class="data-error">Confirm Password must contain at least 8 to 10 characters.</span>
+          <span *ngIf="regForm.touched && regForm.controls.ConfirmPassword.errors?.maxlength" class="data-error">Confirm Password must contain at least 8 to 10 characters.</span>
+        </div>
+      </div>
+      <div class="row">
+        <button [disabled]="!regForm.valid" class="btn waves-effect waves-light" type="submit" name="action">
+          Create an Account
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+      <div class="row">
+        <p style="text-align: center;"><a routerLink="/">Already Have an Account</a></p>
+      </div>
+    </form>
+  </div>
+
+</section>
