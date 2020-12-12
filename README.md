@@ -11,6 +11,15 @@ Preview Pics
 
 ___
 
+# Features
+
+1. Login
+2. Registration
+3. Punch In & Out
+4. Montly TimeTable
+5. Download TimeTable as PDF
+___
+
 # Tech Stack
 
 1. Angular 8
@@ -19,7 +28,6 @@ ___
 4. MongoDB Atlas
 5. Express JS
 6. Node JS
-
 ___
 
 
