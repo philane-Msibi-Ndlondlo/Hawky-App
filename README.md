@@ -1,27 +1,26 @@
-# AttendanceRegister
+# Attendance Register - Hawky
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+[View the app here](https://philane-msibi-ndlondlo.github.io/github-user-profile-app/)
 
-## Development server
+This is a web app that tracks user's attendance. Developed and used it for my intern's years to track my Start and End Time daily for payroll.
+___
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Preview Pics
 
-## Code scaffolding
+![Hawky](https://images.ctfassets.net/d8xmlp2haryb/5felk7YcPwFU7WbJ7Z1tED/2c57632a6b6b7deb7b168995443a77e0/hawky.gif?h=250)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+___
 
-## Build
+# Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Angular 8
+2. Materialize CSS
+3. TypeScript
+4. MongoDB Atlas
+5. Express JS
+6. Node JS
 
-## Running unit tests
+___
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
